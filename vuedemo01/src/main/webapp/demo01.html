@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>vue入门</title>
+    <script src="js/vuejs-2.5.16.js"></script>
+</head>
+<body>
+    <div id="app">
+        {{message}}<br>
+        {{message1}}<br>
+        <button @click="fun('haha')">改变</button>
+    </div>
+</body>
+    <script>
+        new Vue({
+            el:"#app",
+            data:{
+                message:10,
+                message1:"张三"
+            },
+            methods:{
+                fun:function (msg) {
+                    this.message=msg;
+                }
+            }
+        });
+    </script>
+</html>
